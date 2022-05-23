@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('git') {
             steps {
-                git credentialsId:https://github.com/mouli789/Githubintegration.git
+                git credentialsId: 'mouli789' , url:  'https://github.com/mouli789/Githubintegration.git'
             }
         }
         
         stage('build') {
             steps {
-                sh 'docker build -t nodejsdocker .
+                sh 'docker build -t nodejsdocker . '
             }
         }
 
